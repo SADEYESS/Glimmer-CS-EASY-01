@@ -39,19 +39,19 @@
 &nbsp;
 ##### Q5:请调整上述程序的内容，使其输出内容改为Hello glimmer!并附上运行截图
 代码如下:
-![](https://t.tutu.to/img/qCQ7G)
+![](https://t.tutu.to/img/qIqFg)
 ```c
 #include <stdio.h>
 
 int main()
 {
-    printf("hello glimmer!");
+    printf("Hello glimmer!");
     return 0;
 }
 ```
 &nbsp;
 **运行截图：**
-![](https://t.tutu.to/img/qCi4d)
+![](https://t.tutu.to/img/qI9zM)
 &nbsp;
 &nbsp;
 &nbsp;
@@ -93,8 +93,46 @@ int main()
             return 0; //如果用户输入的数字在100000到999999之间，程序结束
             }
         else 
-            printf("Fake code!\n"); //如果用户输入不符合要求，程序会再次开始循环，直到程序附合要求
+            printf("Fake code!\n"); //如果用户的输入不符合要求，程序会再次开始循环，直到程序附合要求
     }
     return 0;
+}
+```
+&nbsp;
+&nbsp;
+&nbsp;
+###　三、课后题
+##### 输入两个整数m,n，输出它们的最大公约数。其中0<m,n<2^31。
+解法如下：
+```c
+#include <stdio.h>
+
+int main()
+{
+    int m,n,GCD;   //声明需要输入的两个变量m，n，由于0<m,n<2^31,可以用int类型表示
+                   //声明一个变量GCD作为最大公约数(Greatest Common Divisor)来进行后面的运算
+    while(1)       //使用 while 循环验证用户的输入是否满足要求，满足要求则进入运算
+    {
+    printf("Please enter two positive integers:\n");  //提示用户输入两个正整数
+    scanf("%d %d",&m,&n); //读取用户输入
+        if (m > 0 && m < 2147483648 && n > 0 && n < 2147483648) //m，n要同时满足>0且<2^31
+        {
+            break; //满足条件则跳出循环
+        }
+        else
+        {
+            printf("Wrong numbers,try again\n");  //不满足条件则提示用户重新输入，再次进入循环
+        }
+    }
+
+    for(GCD=(m<n?m:n);GCD>=1;GCD--) //将GCD初始化为用户输入的两数中较小的一个
+    {                               //利用 for循环 逐个验证，当某数可以同时被两数整除时，该数字则为两数的最大公约数
+        if(m % GCD==0 && n % GCD==0)
+        {
+            printf("The greatest common divisor is %d",GCD);  //打印出求得的最大公约数
+            return 0;
+        }
+    }
+return 0;
 }
 ```
