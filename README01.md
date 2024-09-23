@@ -27,7 +27,7 @@
 #include <stdio.h>　　　 // #后是预处理指令，让编译器包含标准输入输出库文件stdio.h，因而才可调用下文中的printf函数
 int main()　　　　　　　// int 表示主函数 main 返回类型是整数，main 是主函数的名称，后面的空括号表明 main 函数不接受任何参数
 { 　　　　　　　　　　　//标志着 main 函数的开始，括号内的内容都是 main 函数的部分
-    printf("Hello, world!");`//输出字符串 “Hello World！”
+    printf("Hello, world!");//输出字符串 “Hello World！”
    return 0;　　　　　　　//标志 main 函数结束，程序运行无误就会向系统返回 0
 } 　　　　　　　　　　　// main 函数的结束
 ```
