@@ -35,7 +35,7 @@ int main()　　　　　　　// int 表示主函数 main 返回类型是整数
 #### **Q3:删去该程序的哪一行不会影响运行结果？**
 &nbsp;
 如果删除其他几行内容，程序会在编译时报错，但在删除最后的`return 0;`后，程序仍可输出“Hello World”，如图：
-![测试过程](https://t.tutu.to/img/qC4hH)
+![测试过程](https://s3.bmp.ovh/imgs/2024/10/02/fcf9efe46d5b7086.png)
 原因为根据目前定下的的C语言标准，如果编写者在 main 函数中未写出`return`语句，编译器在 main 函数结束时会自动添加 `return 0;`语句
 &nbsp;
 #### **Q4:int类型是计算机存储什么元素的方式？为什么main函数要使用int进行声明/定义？**
@@ -46,7 +46,7 @@ int main()　　　　　　　// int 表示主函数 main 返回类型是整数
 #### **Q5:请调整上述程序的内容，使其输出内容改为Hello glimmer!并附上运行截图**
 &nbsp;
 代码如下:
-![](https://t.tutu.to/img/qIqFg)
+![](https://s3.bmp.ovh/imgs/2024/10/02/b4cfe390928da370.png)
 ```c
 #include <stdio.h>
 
@@ -58,7 +58,7 @@ int main()
 ```
 &nbsp;
 **运行截图：**
-![](https://t.tutu.to/img/qI9zM)
+![](https://s3.bmp.ovh/imgs/2024/10/02/e62d6e49e4749113.png)
 &nbsp;
 &nbsp;
 &nbsp;
